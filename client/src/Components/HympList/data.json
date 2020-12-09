@@ -1,0 +1,12 @@
+[
+	{
+		id:	1,
+		title:	“Title example 1”,
+		lyrics: 	“<br>I wanna<br> be the very best<br>, like no one ever was, to catch them is my real test, to 				train them is my cause”
+	},
+	{
+		id:	2,
+		title:	“Title example 2”,
+		lyrics: 	“<br>I wanna<br> be the very best, like no one ever was, to catch them is my real test, to 				train them is my cause”
+	},
+]
