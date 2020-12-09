@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
 
 // Dotenv loads environment variables from a .env file into process.env.
 require("dotenv").config();
