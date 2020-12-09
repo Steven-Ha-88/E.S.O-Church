@@ -40,7 +40,11 @@ const SongList = (props) => {
   return (
     <>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className='loading-container'>
+          <div className='spinner-border text-primary' role='status'>
+            <span className='sr-only'>Loading...</span>
+          </div>
+        </div>
       ) : (
         <Wrapper>
           <GlobalStyle />
@@ -56,6 +60,7 @@ const SongList = (props) => {
             />
           </div>
           <h3>Hymp Songs</h3>
+          <p>Results: {filter_list ? filter_list.length : songs.length}</p>
           <Table className='table table-borderless table-hover table-striped'>
             <thead className='thead-light'>
               <tr>
