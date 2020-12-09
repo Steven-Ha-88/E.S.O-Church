@@ -27,7 +27,7 @@ const songsRouter = require("./routes/songs");
 
 // app uses endpoints for following url and its routes
 app.use("/songs", songsRouter);
-
+//
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set static folder
