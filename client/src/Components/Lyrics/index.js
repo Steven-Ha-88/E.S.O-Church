@@ -27,7 +27,15 @@ const SongList = ({
       <div style={{ margin: "20px" }}>
         <h4>{filterSong[0] && filterSong[0].title} lyrics</h4>
       </div>
-      {loading ? "Loading..." : filterSong[0] && filterSong[0].lyrics}
+      {loading ? (
+        <div className='loading-container'>
+          <div className='spinner-border text-primary' role='status'>
+            <span className='sr-only'>Loading...</span>
+          </div>
+        </div>
+      ) : (
+        filterSong[0] && filterSong[0].lyrics
+      )}
     </Wrapper>
   );
 };
