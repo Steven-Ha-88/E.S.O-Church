@@ -16,7 +16,7 @@ app.use(cors());
 // adds body-parser middleware, which will transform raw request body into json format.
 app.use(express.json());
 
-const uri = config.mongoURI;
+const uri = process.env.MONGO_URI;
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once("open", () => {
