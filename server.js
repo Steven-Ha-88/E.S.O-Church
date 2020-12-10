@@ -9,7 +9,6 @@ require("dotenv").config();
 
 // creates express applciaition
 const app = express();
-const port = process.env.PORT || 5000;
 
 //allows us to request third party data from localhost
 app.use(cors());
@@ -38,6 +37,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
