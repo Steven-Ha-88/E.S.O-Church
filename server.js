@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
+const config = require("./config/key");
 
 // Dotenv loads environment variables from a .env file into process.env.
 require("dotenv").config();
@@ -15,7 +16,7 @@ app.use(cors());
 // adds body-parser middleware, which will transform raw request body into json format.
 app.use(express.json());
 
-const uri = process.env.MONGO_URI;
+const uri = config.mongoURI;
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true });
 const connection = mongoose.connection;
 connection.once("open", () => {
@@ -34,7 +35,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 

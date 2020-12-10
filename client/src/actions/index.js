@@ -1,6 +1,6 @@
 import { FETCH_SONGS, FETCH_SONGS_ERROR, LOADING } from "./types";
 
-import api from "./api/index";
+import axios from "axios";
 
 const fetchSongs = (data) => ({
   type: FETCH_SONGS,
@@ -21,7 +21,7 @@ const loading = () => ({
 export const getSongs = () => async (dispatch) => {
   dispatch(loading());
   try {
-    const response = await api.get("songs/");
+    const response = await axios.get("/songs");
     console.log("Songs:", response.data);
     dispatch(fetchSongs(response.data));
   } catch (e) {
@@ -31,7 +31,7 @@ export const getSongs = () => async (dispatch) => {
 
 export const updateSong = (id, exercise) => async (dispatch) => {
   try {
-    const response = await api.post(`songs/update/${id}`, exercise);
+    const response = await axios.post(`/songs/update/${id}`, exercise);
     console.log(response);
   } catch (e) {
     console.log(e);
@@ -40,7 +40,7 @@ export const updateSong = (id, exercise) => async (dispatch) => {
 
 export const addSong = (song) => async (dispatch) => {
   try {
-    const response = await api.post("http://localhost:5000/songs/add", song);
+    const response = await axios.post("/songs/add", song);
     console.log(response);
   } catch (e) {
     console.log("ERTGER", e);
@@ -49,7 +49,7 @@ export const addSong = (song) => async (dispatch) => {
 
 export const deleteSong = (id) => async (dispatch) => {
   try {
-    const response = await api.delete("songs/" + id);
+    const response = await axios.delete("songs/" + id);
     console.log(response);
   } catch (e) {
     console.log(e);
