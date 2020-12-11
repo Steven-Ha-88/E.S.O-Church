@@ -20,6 +20,7 @@ const loading = () => ({
 
 export const getSongs = () => async (dispatch) => {
   dispatch(loading());
+  // http://localhost:5000
   try {
     const response = await axios.get("/songs");
     console.log("Songs:", response.data);
