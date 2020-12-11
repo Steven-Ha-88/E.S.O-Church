@@ -4,7 +4,7 @@ import youtube from "../../apis/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
-export const Podcasts = (props) => {
+export const Videos = (props) => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelected] = useState({});
   const [loading, setLoading] = useState(true);
@@ -51,7 +51,7 @@ export const Podcasts = (props) => {
                   href='https://www.youtube.com/channel/UC5JtyGZB8Ah4DHKX3Cth_Jw'
                   className='latest-button'
                   style={{ alignSelf: "center", textAlign: "center" }}>
-                  PODCASTS
+                  Videos{" "}
                 </a>
                 <VideoList onVideoSelect={onVideoSelect} videos={videos} />
               </div>

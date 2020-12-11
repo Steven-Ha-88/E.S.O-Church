@@ -13,6 +13,9 @@ export const Stack = styled.div`
     padding-left: 0px;
     margin: 5px;
   }
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const SocialLinks = styled.a`

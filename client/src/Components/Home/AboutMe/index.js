@@ -15,21 +15,28 @@ export const AboutMe = () => {
   return (
     <>
       <Section data-aos='fade-up' id='about'>
-        <Header>Podcasts</Header>
+        <Header>Who Are We?</Header>
         <Text style={{ textAlign: "center" }}>
-          AniMates release a new podcast every fortnight featuring a new Anime
-          enthusiast. Every episode, they dive into this Anime plots, themes and
-          news. Get to know the hosts KB and Big Murksz by listen to the lastest
-          episode of the AniMates Podcast.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum
         </Text>
       </Section>
       <Container>
         <Wrapper data-aos='fade-up'>
           <Header>What we have in store?</Header>
           <Text>
-            AniMates aim to create UKs biggest Anime events. Bringing you go
-            vibes, good energy and great discussions at a venue near you! To
-            find out more email the AniMates Team.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
           </Text>
         </Wrapper>
         <ImgWrapper data-aos='flip-left'>
@@ -41,23 +48,29 @@ export const AboutMe = () => {
           <img alt='anime img' width='100%' src={pic2} />
         </ImgWrapper>
         <Wrapper order='true' data-aos='fade-up'>
-          <Header>Merchandise</Header>
+          <Header>Meet The Crew</Header>
           <Text>
-            AniMates also plan to bring you high quality anime Clothing.
-            Everything for hats to hoodies; gloves and much more! For more
-            information on the AniMates Clothing, please email the AniMates
-            Team.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
           </Text>
         </Wrapper>
       </Container>
       <Container>
         <Wrapper data-aos='fade-up'>
-          <Header>Live Shows</Header>
+          <Header>Our Future</Header>
           <Text>
-            The AniMates want to get you involved with all the action. We will
-            be hosting live shows for you Anime fans to join. Due to the COV19
-            outbreak, we will be running the LIVE SHOWS on YouTube and Discord
-            until venues reopen.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
           </Text>
         </Wrapper>
         <ImgWrapper data-aos='flip-left'>

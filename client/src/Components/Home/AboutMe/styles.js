@@ -67,7 +67,7 @@ export const ImgWrapper = styled.div`
 export const Header = styled.h1`
   font-size: 2rem;
   font-family: Secular One, sans-serif;
-  color: #ab393c;
+  color: rgb(18, 23, 93);
 `;
 
 export const Text = styled.p`

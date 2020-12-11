@@ -6,6 +6,7 @@ import { SidebarData } from "./sidebar-data";
 import "./navbar.css";
 import { IconContext } from "react-icons";
 import { Stack, SocialLinks } from "./styles";
+import logo from "./../../Images/esomorning/logo.png";
 
 const NavBar = (props) => {
   const [sidebar, setSidebar] = useState(false);
@@ -32,32 +33,39 @@ const NavBar = (props) => {
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className='navbar'>
-          <Stack data-aos='fade-up'>
-            <SocialLinks
-              color='red'
-              href={"https://www.youtube.com/channel/UC5JtyGZB8Ah4DHKX3Cth_Jw"}
-              download>
-              <i className='fab fa-youtube'></i>
-            </SocialLinks>
-            <SocialLinks
-              color='pink'
-              href='https://www.instagram.com/animatestv/'>
-              <i className='fab fa-instagram'></i>
-            </SocialLinks>
-            <SocialLinks
-              color='rgb(34,78,212)'
-              href='https://www.facebook.com/animatestv'>
-              <i className='fab fa-facebook'></i>
-            </SocialLinks>
-            <SocialLinks
-              color='rgb(95 181 252)'
-              href='https://twitter.com/AniMatesTV_'>
-              <i className='fab fa-twitter'></i>
-            </SocialLinks>
-          </Stack>
-          <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar} />
-          </Link>
+          <div style={{ width: "60px" }}>
+            <img width='100%' height='100%' src={logo} alt='logo' />
+          </div>
+          <div className='end-nav'>
+            <Stack data-aos='fade-up'>
+              <SocialLinks
+                color='red'
+                href={
+                  "https://www.youtube.com/channel/UC5JtyGZB8Ah4DHKX3Cth_Jw"
+                }
+                download>
+                <i className='fab fa-youtube'></i>
+              </SocialLinks>
+              <SocialLinks
+                color='pink'
+                href='https://www.instagram.com/animatestv/'>
+                <i className='fab fa-instagram'></i>
+              </SocialLinks>
+              <SocialLinks
+                color='rgb(34,78,212)'
+                href='https://www.facebook.com/animatestv'>
+                <i className='fab fa-facebook'></i>
+              </SocialLinks>
+              <SocialLinks
+                color='rgb(95 181 252)'
+                href='https://twitter.com/AniMatesTV_'>
+                <i className='fab fa-twitter'></i>
+              </SocialLinks>
+            </Stack>
+            <Link to='#' className='menu-bars'>
+              <FaIcons.FaBars onClick={showSidebar} />
+            </Link>
+          </div>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className='nav-menu-items' onClick={showSidebar}>

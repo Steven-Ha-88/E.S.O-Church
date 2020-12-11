@@ -1,12 +1,12 @@
 import React from "react";
 import { Container } from "./styles";
 
-import { Podcasts } from "../../Podcasts/index";
+import { Videos } from "../../Videos/index";
 
 export const Youtube = () => {
   return (
     <Container id='projects'>
-      <Podcasts />
+      <Videos />
     </Container>
   );
 };
