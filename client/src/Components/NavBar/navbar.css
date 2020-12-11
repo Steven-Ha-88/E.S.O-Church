@@ -23,6 +23,16 @@
   display: flex;
 }
 
+.logo {
+  width: 55px;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 45px;
+  }
+}
+
 .nav-menu {
   background-color: rgb(18, 23, 93);
   width: 250px;

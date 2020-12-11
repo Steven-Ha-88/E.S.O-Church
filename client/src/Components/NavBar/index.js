@@ -33,7 +33,7 @@ const NavBar = (props) => {
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <div className='navbar'>
-          <div style={{ width: "60px" }}>
+          <div className='logo'>
             <img width='100%' height='100%' src={logo} alt='logo' />
           </div>
           <div className='end-nav'>
