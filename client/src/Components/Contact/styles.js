@@ -5,7 +5,6 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  margin-top: 10px;
   height: 400px;
   background-color: #ab393c;
   color: white;

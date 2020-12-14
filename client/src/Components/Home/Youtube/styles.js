@@ -6,8 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color: #fff0;
-  padding: 0px 100px;
-  padding-top: 80px;
+  padding: 100px;
   @media (max-width: 780px) {
     padding: 0px;
     padding-top: 20px;

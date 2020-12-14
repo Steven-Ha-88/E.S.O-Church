@@ -35,9 +35,61 @@ const NavBar = (props) => {
         <div className='navbar'>
           <div className='logo'>
             <img width='100%' height='100%' src={logo} alt='logo' />
+            <ul
+              className='nav-list'
+              style={{
+                display: "flex",
+                flexFlow: "row nowrap",
+                margin: "auto",
+              }}>
+              <li>
+                <Link
+                  style={{ color: "rgb(255, 255, 255)", fontSize: "14px" }}
+                  className='nav-link link'
+                  to='/'>
+                  Home <span className='sr-only'>(current)</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  style={{
+                    color: "rgb(255, 255, 255)",
+                    fontSize: "14px",
+                    width: "max-content",
+                  }}
+                  className='nav-link link'
+                  to='/about'>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  style={{ color: "rgb(255, 255, 255)", fontSize: "14px" }}
+                  className='nav-link link'
+                  to='/hympsongs'>
+                  Hymp Songs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  style={{ color: "rgb(255, 255, 255)", fontSize: "14px" }}
+                  className='nav-link link'
+                  to='/createsong'>
+                  Add Songs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  style={{ color: "rgb(255, 255, 255)", fontSize: "14px" }}
+                  className='nav-link link'
+                  to='/info'>
+                  Information
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className='end-nav'>
-            <Stack data-aos='fade-up'>
+            <Stack>
               <SocialLinks
                 color='red'
                 href={

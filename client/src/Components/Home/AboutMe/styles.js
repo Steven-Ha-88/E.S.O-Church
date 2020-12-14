@@ -26,6 +26,7 @@ export const Container = styled.div`
   flex-flow: row wrap;
   height: auto;
   justify-content: center;
+  background-color: ${(props) => (props.color ? props.color : "white")};
   @media (max-width: 480px) {
     flex-flow: column nowrap;
     height: 500px;
@@ -41,7 +42,6 @@ export const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 20px 50px;
-  background-color: white;
   @media (max-width: 480px) {
     align-items: center;
     text-align: center;
@@ -65,13 +65,14 @@ export const ImgWrapper = styled.div`
 `;
 
 export const Header = styled.h1`
+  color: ${(props) => (props.color ? props.color : "white")};
   font-size: 2rem;
   font-family: Secular One, sans-serif;
-  color: rgb(18, 23, 93);
 `;
 
 export const Text = styled.p`
-  font-size: 1.5rem;
+  color: ${(props) => (props.color ? props.color : "black")};
+  font-size: 12.5px;
   @media (max-width: 480px) {
     font-size: 1rem;
   }

@@ -17,6 +17,25 @@
 .menu-bars {
   font-size: 2rem;
   background: none;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .menu-bars {
+    display: flex;
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: auto;
+}
+
+@media (max-width: 480px) {
+  .nav-list {
+    display: none !important;
+  }
 }
 
 .end-nav {
@@ -24,7 +43,9 @@
 }
 
 .logo {
-  width: 55px;
+  width: 50px;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 @media (max-width: 480px) {
@@ -92,4 +113,10 @@
 
 span {
   margin-left: 16px;
+}
+
+.link {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  width: max-content;
 }

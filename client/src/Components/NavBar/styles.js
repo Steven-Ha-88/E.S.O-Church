@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Stack = styled.div`
   display: flex;
   flex-direction: row;
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 20px;
   margin-top: 5px;
   padding-left: 20px;

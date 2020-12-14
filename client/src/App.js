@@ -8,6 +8,7 @@ import AboutPage from "./Components/About/index";
 import lyrics from "./Components/Lyrics/index";
 import UpdateSong from "./Components/EditSong/index";
 import { Footer } from "./Components/Footer/index";
+import Info from "./Components/Information/index";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route exact path='/edit/:id' component={UpdateSong} />
         <Route exact path='/hympsongs' component={SongList} />
         <Route exact path='/lyrics/:id' component={lyrics} />
+        <Route exact path='/info' component={Info} />
         <Footer />
       </Router>
     </div>
