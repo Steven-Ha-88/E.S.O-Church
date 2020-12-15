@@ -4,7 +4,7 @@ import { Youtube } from "./Youtube/index.js";
 // import { GlobalStyle } from "../../styles";
 import { Contact } from "../Contact/index";
 import { ImageWrapper } from "./styles";
-import banner from "./../../Images/esomorning/banner.png";
+import banner from "./../../Images/esomorning/backdrop.png";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         {/* <ImageWrapper image={banner} /> */}
         <div style={{ width: "100vw" }}>
           <img
-            style={{ marginTop: "-3px" }}
+            style={{ marginTop: "-40px" }}
             width='100%'
             src={banner}
             alt='picture of church'
