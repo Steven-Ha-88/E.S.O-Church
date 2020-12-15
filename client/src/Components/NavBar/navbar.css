@@ -20,7 +20,7 @@
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 834px) {
   .menu-bars {
     display: flex;
   }
@@ -32,7 +32,7 @@
   margin: auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 834px) {
   .nav-list {
     display: none !important;
   }

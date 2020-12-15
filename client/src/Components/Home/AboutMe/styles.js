@@ -23,28 +23,23 @@ export const Section = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   height: auto;
   justify-content: center;
+  align-items: center;
   background-color: ${(props) => (props.color ? props.color : "white")};
-  @media (max-width: 480px) {
-    flex-flow: column nowrap;
-    height: 500px;
-    flex-direction: column;
-  }
 `;
 
 export const Wrapper = styled.div`
   width: 60%;
   display: flex;
+  align-items: center;
   color: black;
-  align-items: start;
   justify-content: center;
   flex-direction: column;
-  padding: 20px 50px;
+  padding: 20px;
+  text-align: center;
   @media (max-width: 480px) {
-    align-items: center;
-    text-align: center;
     padding: 50px;
     width: 100%;
     height: 100%;
@@ -52,9 +47,14 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const Expand = styled.span`
+  display: ${(props) => (props.toggle ? "none" : "inline-block")};
+  margin: 0px;
+`;
+
 export const ImgWrapper = styled.div`
-  padding: 30px;
-  width: 40%;
+  margin-bottom: 10px;
+  width: 100%;
   align-self: center;
   @media (max-width: 480px) {
     width: 95%;
@@ -68,11 +68,12 @@ export const Header = styled.h1`
   color: ${(props) => (props.color ? props.color : "white")};
   font-size: 2rem;
   font-family: Secular One, sans-serif;
+  margin: 0px;
 `;
 
 export const Text = styled.p`
   color: ${(props) => (props.color ? props.color : "black")};
-  font-size: 12.5px;
+  font-size: 16px;
   @media (max-width: 480px) {
     font-size: 1rem;
   }

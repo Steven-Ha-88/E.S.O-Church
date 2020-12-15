@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import pic1 from "./../../../Images/esomorning/picture-of-history.png";
 import pic2 from "./../../../Images/esomorning/picture-of-ambition.png";
 import pic3 from "./../../../Images/esomorning/picture-of-goals.png";
@@ -9,9 +9,12 @@ import {
   ImgWrapper,
   Header,
   Text,
+  Expand,
 } from "./styles";
 
 export const AboutMe = () => {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <>
       {/* <Section data-aos='fade-up' id='about'>
@@ -29,6 +32,9 @@ export const AboutMe = () => {
       <Container color='rgb(18, 23, 93)'>
         <Wrapper data-aos='fade-up'>
           <Header>Our History</Header>
+          <ImgWrapper data-aos='flip-left'>
+            <img alt='anime img' width='100%' src={pic1} />
+          </ImgWrapper>
           <Text color='white'>
             The Church was founded by Late Saint Moses Orimolade Tunolase of
             blessed memory. The group was unique in that they worship in white
@@ -38,28 +44,50 @@ export const AboutMe = () => {
             started his evangelistic and spiritual healing work from his
             hometown, in Ikare Akoko and moved to other parts of the country
             before moving to Lagos when he had a vision that the Atlantic Ocean
-            was about to submerge Lagos. After many successful prayer sessions
-            and revival services he won many followers. He never intended to
-            start a church but only to spiritually reawaken the existing
-            churches by teaching them the way and injunction of the Holy Spirit.
-            Many of the church leaders rejected him for many reasons including
-            the fact that he was not only an illiterate but also that he had no
-            known religious root. With the huge followership, it became
-            expedient to find a name for the prayer group. At Agosofin in Lagos
-            Island the Order was named added on Wednesday 9 September, 1925. And
-            Cherub was thursday 26" May, 1927.
+            was about to submerge Lagos.
+            <Expand toggle={toggle}>
+              ..
+              <a
+                style={{ cursor: "pointer", color: "blue" }}
+                onClick={() => setToggle(!toggle)}>
+                Read more
+              </a>
+            </Expand>
+            <br />
+            <br />
+            {toggle ? (
+              <Text color='white'>
+                After many successful prayer sessions and revival services he
+                won many followers. He never intended to start a church but only
+                to spiritually reawaken the existing churches by teaching them
+                the way and injunction of the Holy Spirit. Many of the church
+                leaders rejected him for many reasons including the fact that he
+                was not only an illiterate but also that he had no known
+                religious root. With the huge followership, it became expedient
+                to find a name for the prayer group. At Agosofin in Lagos Island
+                the Order was named added on Wednesday 9 September, 1925. And
+                Cherub was thursday 26" May, 1927.
+                <Expand>
+                  ..{" "}
+                  <a
+                    style={{ cursor: "pointer", color: "blue" }}
+                    onClick={() => setToggle(!toggle)}>
+                    Read less
+                  </a>
+                </Expand>
+              </Text>
+            ) : (
+              false
+            )}
           </Text>
         </Wrapper>
-        <ImgWrapper data-aos='flip-left'>
-          <img alt='anime img' width='100%' src={pic1} />
-        </ImgWrapper>
       </Container>
       <Container>
-        <ImgWrapper order='true' data-aos='flip-right'>
-          <img alt='anime img' width='100%' src={pic2} />
-        </ImgWrapper>
         <Wrapper order='true' data-aos='fade-up'>
           <Header color='rgb(18, 23, 93)'>Where We Are</Header>
+          <ImgWrapper order='true' data-aos='flip-right'>
+            <img alt='anime img' width='100%' src={pic2} />
+          </ImgWrapper>
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -74,6 +102,9 @@ export const AboutMe = () => {
       <Container color='rgb(18, 23, 93)'>
         <Wrapper data-aos='fade-up'>
           <Header>Our Future</Header>
+          <ImgWrapper data-aos='flip-left'>
+            <img alt='anime img' width='100%' src={pic3} />
+          </ImgWrapper>
           <Text color='white'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -84,9 +115,6 @@ export const AboutMe = () => {
             culpa qui officia deserunt mollit anim id est laborum
           </Text>
         </Wrapper>
-        <ImgWrapper data-aos='flip-left'>
-          <img alt='anime img' width='100%' src={pic3} />
-        </ImgWrapper>
       </Container>
     </>
   );
